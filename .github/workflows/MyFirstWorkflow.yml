@@ -5,6 +5,20 @@ on:
     branches: 
       - main
   workflow_dispatch:
+    inputs:
+      homedrive:
+        description: 'The home drive on the machine'
+        required: true
+      logLevel:
+        description: 'Log level'
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+      tag:
+        description: 'Apply tag after successfull test run'
 
 jobs:
   MyFirstJob:
