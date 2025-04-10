@@ -19,6 +19,11 @@ on:
         - debug
       tag:
         description: 'Apply tag after successfull test run'
+        required: true
+        type: boolean
+      enviornment:
+        description: 'Environment to run tests against'
+        required: true
 
 jobs:
   MyFirstJob:
